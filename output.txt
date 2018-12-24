@@ -1,0 +1,173 @@
+Script started on Fri 22 Dec 2017 02:57:30 PM EST
+amoradpour@matrix:~/OOP_345/finalProject/milestone_3> exitws TaskList_Malformed.txt CustomerOrders_Malformed.txt ItemList_Malformed.txt , 
+Command Line Arguments
+----------------------
+Task File Specified           = TaskList_Malformed.txt
+Customer Order File Specified = CustomerOrders_Malformed.txt
+Item File Specified           = ItemList_Malformed.txt
+File Record Field Delimiter   = ,
+
+Building the Network of Tasks
+-----------------------------
+,,<-- *** no token found before the delimiter ***
+,Remove SSD,1,SSD,<-- *** no token found before the delimiter ***
+Task Name    : [Power Supply]  [4]
+ Continue to : [Motherboard]   *** to be validated ***
+Task Name    : [Motherboard]   [3]
+ Continue to : [CPU]           *** to be validated ***
+ Redirect to : [Remove CPU]    *** to be validated ***
+Task Name    : [Remove CPU]    [1]
+ Continue to : [CPU]           *** to be validated ***
+Task Name    : [CPU]           [5]
+ Continue to : [Memory]        *** to be validated ***
+ Redirect to : [Remove CPU]    *** to be validated ***
+Task Name    : [Remove CPU]    [1]
+ Continue to : [CPU]           *** to be validated ***
+Task Name    : [Memory]        [4]
+ Continue to : [SSD]           *** to be validated ***
+ Redirect to : [Remove Memory] *** to be validated ***
+Task Name    : [Remove Memory] [1]
+ Continue to : [Memory]        *** to be validated ***
+Task Name    : [SSD]           [4]
+ Continue to : [GPU]           *** to be validated ***
+ Redirect to : [Remove SSD]    *** to be validated ***
+Task Name    : [Remove SSD]    [1]
+ Continue to : [SSD]           *** to be validated ***
+Task Name    : [GPU]           [3]
+ Continue to : [Test]          *** to be validated ***
+Task Name    : [Test]          [4]
+ Continue to : [Approve]       *** to be validated ***
+ Redirect to : [Repair]        *** to be validated ***
+Task Name    : [Test / 4 / Approve / Repair][1]
+Task Name    : [CPU]           [5]
+ Continue to : [Memory]        *** to be validated ***
+ Redirect to : [Remove CPU]    *** to be validated ***
+Task Name    : [4]             [SSD]
+ Continue to : [GPU]           *** to be validated ***
+ Redirect to : [Remove SSD]    *** to be validated ***
+Task Name    : [Repair]        [1]
+Task Name    : [Approve]       [1]
+
+Validating the Set of Tasks
+---------------------------
+
+List of Accepted Tasks
+----------------------
+Task Name    : [Power Supply]  [4]
+ Continue to : [Motherboard]   
+Task Name    : [Motherboard]   [3]
+ Continue to : [CPU]           
+ Redirect to : [Remove CPU]    
+Task Name    : [Remove CPU]    [1]
+ Continue to : [CPU]           
+Task Name    : [CPU]           [5]
+ Continue to : [Memory]        
+ Redirect to : [Remove CPU]    
+Task Name    : [Remove CPU]    [1]
+ Continue to : [CPU]           
+Task Name    : [Memory]        [4]
+ Continue to : [SSD]           
+ Redirect to : [Remove Memory] 
+Task Name    : [Remove Memory] [1]
+ Continue to : [Memory]        
+Task Name    : [SSD]           [4]
+ Continue to : [GPU]           
+ Redirect to : [Remove SSD]    
+Task Name    : [Remove SSD]    [1]
+ Continue to : [SSD]           
+Task Name    : [GPU]           [3]
+ Continue to : [Test]          
+Task Name    : [Test]          [4]
+ Continue to : [Approve]       
+ Redirect to : [Repair]        
+Task Name    : [Test / 4 / Approve / Repair][1]
+Task Name    : [CPU]           [5]
+ Continue to : [Memory]        
+ Redirect to : [Remove CPU]    
+Task Name    : [4]             [SSD]
+ Continue to : [GPU]           
+ Redirect to : [Remove SSD]    
+Task Name    : [Repair]        [1]
+Task Name    : [Approve]       [1]
+
+*** Load and Accept the Customer Orders ***
+,,,<-- *** no token found before the delimiter ***
+, Peter McIntyre     ,<-- *** no token found before the delimiter ***
+
+List of Accepted Customer Orders
+--------------------------------
+Fardad Soleimanloo : Dell Precision 3600
+ + [00000] CPU
+ + [00000] Memory
+ + [00000] Memory
+ + [00000] 
+Joseph Hughes      : HP Z230
+ + [00000] CPU
+ + [00000] Memory
+Chris Szalwinski   : HP Z350
+ + [00000] CPU
+ + [00000] Memory
+ + [00000] SSD
+ + [00000] GPU
+Elliott Coleshill  : HP Apollo 1000
+ + [00000] CPU
+ + [00000] MEMORY
+ + [00000] Power Supply
+ + [00000] GPU
+                  : 
+                  : 
+
+*** Load and accept the Items in Stock ***
+,,<-- *** no token found before the delimiter ***
+,Fan,Fan, Place fan       ,900, CoolMasters R56,,,<-- *** no token found before the delimiter ***
+, , , , ,<-- *** no token found before the delimiter ***
+,,PCIe SSD,<-- *** no token found before the delimiter ***
+
+List of In-Stock Items
+----------------------
+CPU         [00300] from CPU         to Remove CPU  
+                    : Central Processing Unit
+Memory      [00400] from Memory      to Remove Memory
+                    : Samsung Memory Stick
+GPU         [00500] from GPU         to Remove GPU  
+                    : Nvidia Geforce 750M
+Power Supply[00100] from Power Supplyto Remove Power Supply
+                    : no detailed description
+ is not available
+Memory is not available
+SSD is not available
+MEMORY is not available
+Remove GPU is not available
+Remove Power Supply is not available
+
+*** Fill the Customer Orders ***
+
+List of Processed Customer Orders
+---------------------------------
+Fardad Soleimanloo : Dell Precision 3600
+ + [00300] CPU
+ + [00400] Memory
+ + [00401] Memory
+ + [00000] 
+Joseph Hughes      : HP Z230
+ + [00301] CPU
+ + [00000] Memory
+Chris Szalwinski   : HP Z350
+ + [00302] CPU
+ + [00402] Memory
+ + [00000] SSD
+ + [00000] GPU
+Elliott Coleshill  : HP Apollo 1000
+ + [00303] CPU
+ + [00000] MEMORY
+ + [00100] Power Supply
+ + [00000] GPU
+                  : 
+                  : 
+
+Done!
+Press Enter Key to Exit ... 
+amoradpour@matrix:~/OOP_345/finalProject/milestone_3> exit
+exit
+
+Script done on Fri 22 Dec 2017 02:57:57 PM EST
