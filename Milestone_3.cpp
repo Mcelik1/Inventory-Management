@@ -1,8 +1,4 @@
-// Manager Milestone - Main Program
-// Milestome_3.cpp
-// Chris Szalwinski
-// v1.0 - 16/11/2015
-// v2.0 - 15/01/2016
+
 #include <iostream>
 #include <fstream>
 #include <string>
